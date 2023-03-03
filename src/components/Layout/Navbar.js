@@ -34,6 +34,10 @@ const Navbar = () => {
     setIsPopupActive(true);
   };
 
+  const handleClosePopup = () => {
+    setIsPopupActive(false);
+  };
+
   const handleLogin = () => {
     setIsLoggedIn(true);
     setIsPopupActive(false);
@@ -65,6 +69,7 @@ const Navbar = () => {
         isPopupActive ? 
         <div style={styles.popUpWrapper}>
           <div style={styles.popUpContent}>
+            <p style={styles.closeIcon}><span style={styles.closeSpan} onClick={() => handleClosePopup() }>X</span></p>
             <p style={styles.formHead}>Login</p>
             <div style={styles.inputWrapper}>
               <p><label>Username:</label></p>
@@ -88,7 +93,7 @@ const Navbar = () => {
         >
           <Link to="/products">
             <Typography variant="h6" component="div" color="text.secondary">
-              Store
+               Fashion Store
             </Typography>
           </Link>
           { !isLoggedIn ? <p style={styles.loginLink} onClick={() => onLoginClick() }>Login</p> : <></> }
@@ -166,6 +171,16 @@ const styles = {
     cursor: 'pointer',
     border: '1px solid black',
     borderRadius: 5
+  },
+  closeIcon: {
+    fontSize: 24,
+    textAlign: 'right',
+    color: 'black',
+    paddingRight: 20,
+    paddingTop: 10
+  },
+  closeSpan: {
+    cursor: 'pointer'
   }
 };
 

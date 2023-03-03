@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
       </div>
       <div style={styles.addressWrapper}>
-        <p style={styles.boldHeading}>Address</p>
+        <p style={styles.boldHeading}>Address : Ashok Nagar West Delhi</p>
         <p style={styles.footerLinks}>Telephone: 1800 121 158 158</p>
         <p style={styles.footerLinks}>Email: support@nourishstore.co.in</p>
       </div>
